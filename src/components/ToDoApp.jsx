@@ -92,7 +92,7 @@ export const ToDoApp = () => {
         } else{
             let result = notes.map((note) => (
                 <li key={note.id}>
-                <input onClick={() => completeNote(note.id)} type="checkbox" name="" id="" />                
+                <input checked={note.isComplete === true ? true : false} onClick={() => completeNote(note.id)} type="checkbox" name="" id="" />                
                 <span>{note.title}</span>
                 <button onClick={() => editNote(note.id)}>Edit</button>
                 <button onClick={ () => removeNote(note.id)}>Delete</button>
